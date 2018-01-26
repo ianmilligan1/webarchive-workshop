@@ -29,7 +29,7 @@
 					Ian Milligan<br>
 					University of Waterloo
 				</section>
-				<section>Follow along here, please at URL</section>
+				<section>Follow along at <a href="https://ianmilligan1.github.io/webarchive-workshop/">https://ianmilligan1.github.io/webarchive-workshop/</a></section>
 				<section>
 					<section>Part One: Accessing the Archived Web (Responsibly)</section>
 					<section>
@@ -312,7 +312,8 @@ RecordLoader.loadArchives("/aut-resources/Sample-Data/*.gz", sc)
   			</section>
   			<section>
   				<p>Instead of a nice crisp feeling of success, you will see a long dump of text beginning with:</p>
-				<p><pre>org.apache.hadoop.mapred.FileAlreadyExistsException: Output directory file:/data/liberal-party-text already exists</pre></p>
+				<p><pre><code data-trim data-noescape>org.apache.hadoop.mapred.FileAlreadyExistsException: Output directory file:/data/liberal-party-text already exists
+				</code></pre></p>
 				<p>To get around this, you can do two things:</p>
 				<ul>
 					<li>Delete the existing directory that you created;</li>
@@ -326,18 +327,18 @@ RecordLoader.loadArchives("/aut-resources/Sample-Data/*.gz", sc)
 			</section>
 			<section>
 				<p><b>Keep URL Patterns</b></p>
-				<p>Instead of domains, what if you wanted to have text relating to just a certain pattern? Substitute <pre>.keepDomains</pre> for a command like:</p>
-				<p><pre>.keepUrlPatterns(Set("(?i)http://geocities.com/EnchantedForest/.*".r))</pre></p>
+				<p>Instead of domains, what if you wanted to have text relating to just a certain pattern? Substitute <pre><code data-trim data-noescape>.keepDomains</code></pre> for a command like:</p>
+				<p><pre><code data-trim data-noescape>.keepUrlPatterns(Set("(?i)http://geocities.com/EnchantedForest/.*".r))</code></pre></p>
 			</section>
 			<section>
 				<p><b>Filter by Date</b></p>
-				<p>What if we just wanted data from 2005, or 2008? You could add the following command after <pre>.keepValidPages()</pre>:</p>
-				<p><pre>.keepDate(List("2005"), YYYY)</pre></p>
+				<p>What if we just wanted data from 2005, or 2008? You could add the following command after <pre><code data-trim data-noescape>.keepValidPages()</code></pre>:</p>
+				<p><pre><code data-trim data-noescape>.keepDate(List("2005"), YYYY)</code></pre></p>
 			</section>
 			<section>
 				<p><b>Filter by Language</b></p>
-				<p>What if you just want French-language pages? After <pre>.keepDomains</pre> add a new line:</p>
-				<p><pre>.keepLanguages(Set("fr"))</pre></p>
+				<p>What if you just want French-language pages? After <pre><code data-trim data-noescape>.keepDomains</code></pre> add a new line:</p>
+				<p><pre><code data-trim data-noescape>.keepLanguages(Set("fr"))</code></pre></p>
 			</section>
 			<section>
 				<p>For example, if we just wanted French-language Liberal pages, we would run:</p>
