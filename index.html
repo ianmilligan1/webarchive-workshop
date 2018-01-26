@@ -1,0 +1,426 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/solarized.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="https://ianmilli.files.wordpress.com/2017/09/fe539-1ueftbmadg8l_cohjaedmfw.png">
+					Web Archiving Analysis Workshop<br><br>
+					Ian Milligan<br>
+					University of Waterloo
+				</section>
+				<section>Follow along here, please at URL</section>
+				<section>
+					<section>Part One: Accessing the Archived Web (Responsibly)</section>
+					<section>
+						Let's go to the Internet Archive!
+					</section>
+					<section>
+						<img src="https://ianmilli.files.wordpress.com/2018/01/screen-shot-2018-01-26-at-9-38-04-am.png" height="400"><br>
+						<a href="http://archive.org/web/">Wayback Machine</a>
+					</section>
+					<section>
+						<img src="https://ianmilli.files.wordpress.com/2018/01/screen-shot-2018-01-26-at-9-51-18-am.png" height="400">
+						<a href="https://web.archive.org/web/*/Simon%20Fraser%20University"><br>Let's do a keyword search for "Simon Fraser University."</a>
+					</section>
+					<section>
+						<img src="https://ianmilli.files.wordpress.com/2018/01/screen-shot-2018-01-26-at-9-53-25-am.png" height="400"><br>Provenance
+					</section>
+					<section>
+						<img src="https://ianmilli.files.wordpress.com/2018/01/screen-shot-2018-01-26-at-10-03-44-am.png" height="400"><br><a href="http://web.archive.org/web/19980213154824/http://www13.geocities.com/">Note the drift.</a>
+					</section>
+					<section>
+						<p><b>Exercise #1</b></p>
+						<p>Try to find some sites of interest. Do you see any gaps? Why were sites collected? Do you find any temporal violations?</p>
+						<p>Can you find any sites that may have never existed? (spooky)</p>
+					</section>
+				</section>
+				<section>
+					<section>Part Two: Conceieving a Research Question</section>
+					<section>Let's look at a few web research approaches first.</section>
+					<section>
+						<img src="https://ianmilli.files.wordpress.com/2018/01/screen-shot-2018-01-26-at-10-11-25-am.png" height="400"><br><a href="http://voyant-tools.org/">Voyant Tools.</a>
+					</section>
+					<section>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/kghrZafofRs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><br>Network Analysis.
+					</section> 
+					<section>
+						<img src="https://ianmilli.files.wordpress.com/2018/01/screen-shot-2018-01-26-at-10-03-44-am.png" height="400"><br>Looking at pages!
+					</section>
+					<section>
+						<p><b>Exercise #2</b></p>
+						<p>Let’s now begin to think about what we could do with web archives. Try to think of a simple research question you could explore with <b>five to ten</b> websites from the Web, that involve the following dimensions:</p>
+						<ul>
+							<li>Using plain text</li>
+							<li>Using hyperlinks</li>
+							<li>Visual layout (using Wayback Machine)</li>
+						</ul>
+					<p>Take a few minutes to write down your ideas.</p>
+					</section>
+				</section>
+				</section>
+				<section>
+				<section>Part Three: Getting Web Archive Files</section>
+					<section>Always check for existing collections!</section>
+					<section>
+						<img src="https://ianmilli.files.wordpress.com/2015/01/aha-talk-006.jpg" height="400"><br>Wayback Machine powered by WARC files?
+					</section>
+					<section>
+						<img src="https://ianmilli.files.wordpress.com/2018/01/screen-shot-2018-01-26-at-10-18-10-am.png" height="400"><br>Example Collection: <a href="https://archive-it.org/collections/227">Canadian Political Parties at University of Toronto</a>!
+					</section>
+					<section>
+						<img src="https://ianmilli.files.wordpress.com/2018/01/screen-shot-2018-01-26-at-10-18-11-am.png" height="400"><br>Example Collection: <a href="https://archive-it.org/organizations/75">University of Toronto Collections in General</a>!
+					</section>
+					<section>
+						<img src="https://ianmilli.files.wordpress.com/2018/01/screen-shot-2018-01-26-at-10-18-13-am.png" height="400"><br>Example Collection: <a href="https://www.archive-it.org/home/lib.sfu.ca">Simon Fraser University</a>!
+					</section>
+					<section>
+						<img src="https://ianmilli.files.wordpress.com/2018/01/screen-shot-2018-01-26-at-10-23-42-am.png" height="400"><a href="https://webarchive.jira.com/wiki/spaces/ARS/overview"><p>Archive-It Research Services</p></a>
+					</section>
+					<section>
+						<img src="https://ianmilli.files.wordpress.com/2018/01/screen-shot-2018-01-26-at-10-22-27-am.png" height="400"><a href="http://archivesunleashed.org/"><p>Archives Unleashed Project!</p></a>
+					</section>
+					<section>
+						Talk to your librarian, or the librarian who controls a collection! They probably want you to be able to build on their hard work.
+					</section>
+					<section>
+						<p><strong>Exercise #3</strong></p>
+						<p>Start exploring the Archive-It page!</p>
+						<p>
+							<ul>
+								<li>What sorts of collections can you find in Canada?</li>
+								<li>What sorts of collections can you find elsewhere?</li>
+								<li>Can you imagine using any of these in your research?</li>
+							</ul>
+						</p>
+						<p>Take 5-10 minutes to explore, and then we'll have a quick discussion.</p>
+					</section>
+				</section>
+				<section>
+					<section>Part Four: WASAPI for Fun and Profit</section>
+					<section>Guest Star: Nick Ruest!</section>
+				</section>
+				<section>
+					<section>Part Five: Rolling Your Own Web Archive</section>
+					<section>Sometimes you have to make your own web archive!</section>
+					<section>
+						<img src="https://ianmilli.files.wordpress.com/2018/01/screen-shot-2018-01-26-at-10-27-05-am.png" height="400"><a href="https://webarchive.jira.com/wiki/spaces/Heritrix/overview"><p>Heritrix!</p></a>
+					</section>
+					<section>Heritrix is a bit hard to run...</section>
+					<section>
+						<img src="https://ianmilli.files.wordpress.com/2018/01/screen-shot-2018-01-26-at-10-28-07-am.png" height="400"><a href="https://programminghistorian.org/lessons/automated-downloading-with-wget"><p>You can also use Wget</p></a>
+					</section>
+					<section>But it's not a walk in the park either...</section>
+					<section>You can use WebRecorder.io!</section>
+					<section>It is a lot of fun, and pretty easy to use.</section>
+					<section>
+						<img src="https://ianmilli.files.wordpress.com/2018/01/screen-shot-2018-01-26-at-10-29-11-am.png" height="400"><a href="https://webrecorder.io/"><p>WebRecorder.io</p></a>
+					</section>
+					<section>
+						<p><b>Exercise #5</b></p>
+						<p>Use WebRecorder.io to grab the following two things:</p>
+						<ul>
+							<li>Try to grab <a href="http://sfu.ca/">Simon Fraser University's home page</a> (go a bit deep)</li>
+							<li>Try to grab <a href="https://twitter.com/realDonaldTrump?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Donald Trump's Twitter Timeline</a>. You will need to use the "infinite scroll" feature.</li>
+						</ul>
+						<p>Take about 5 or 10 minutes to get familiar with the interface. When you're done, we'll begin thinking about our own collection...</p>
+					</section>
+					<section>
+						<p><b>Exercse #5B</b></p>
+						<p>Remember those five to ten websites I asked you to write down in Exercise #2?</p>
+						<p>You guessed it! Now begin to crawl this content with WebRecorder.io. Please try to make sure you don't grab more than 200-300MB (just for WiFi problems</p>
+						<p>When you are done, <b>download the WARCs</b>.</p>
+					</section>
+				</section>
+				<section>
+					<section>Part Six: Unleashing Archives with the Archives Unleashed Toolkit</section>
+					<section>
+						<p>You all installed <a href="https://www.docker.com/get-docker">Docker</a> and <a href="https://gephi.org/">Gephi</a> right?</p>
+						<p>If not.. quietly do so!</p>
+					</section>
+					<section>
+						Make sure Docker is running.
+					</section>
+					<section>
+						<img src="https://ianmilli.files.wordpress.com/2018/01/screen-shot-2018-01-26-at-10-42-47-am.png">
+						<p>Create a directory, by default on your desktop.</p>
+						<p>If you downloaded your WARCs, please put them in this new directory.</p>
+					</section>
+					<section>
+						<img src="https://ianmilli.files.wordpress.com/2018/01/screen-shot-2018-01-26-at-10-43-55-am.png" height="400">
+						<p>Now open up your terminal window.</p>
+					</section>
+					<section>
+						<p>We now need to run the following command. You need to replace /path/to/your/data with the directory you just made.</p>
+						<p>Don't worry! We'll be here to help.</p>
+					</section>
+					<section>
+						<pre><code data-trim data-noescape>
+							docker run --rm -it -v "/path/to/your/data:/data" archivesunleashed/docker-aut
+						</code></pre>
+						<p>Remember, replace /path/to/your/data with your own path. On my system, it is:</p>
+						<pre><code data-trim data-noescape>
+							docker run --rm -it -v "/Users/ianmilligan1/desktop/data:/data" archivesunleashed/docker-aut
+						</code></pre>
+					</section>
+					<section>
+						<p>Once it's working, you should see:</p>
+						<pre><code data-trim data-noescape>
+							Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /___/ .__/\_,_/_/ /_/\_\   version 2.1.1
+      /_/
+
+Using Scala version 2.11.8 (OpenJDK 64-Bit Server VM, Java 1.8.0_151)
+Type in expressions to have them evaluated.
+Type :help for more information.
+
+scala>
+
+						</code></pre>
+				</section>
+				<section>
+					<p><b>Hello World: Our First Script!</b></p>
+					<p>Now that we are at the prompt, let's get used to running commands. The easiest way to use the Spark Shell is to copy and paste scripts that you've written somewhere else in.</p>
+				</section>
+				<section>
+					<p>At the scala> prompt, type the following command and press enter.</p>
+					<pre><code data-trim data-noescape>
+						:paste
+					</code></pre>
+				</section>
+				<section>
+					<p>Now, cut and paste the following command:</p>
+					<pre><code data-trim data-noescape>
+import io.archivesunleashed.spark.matchbox._
+import io.archivesunleashed.spark.rdd.RecordRDD._
+
+val r = RecordLoader.loadArchives("/aut-resources/Sample-Data/*.gz", sc)
+.keepValidPages()
+.map(r => ExtractDomain(r.getUrl))
+.countItems()
+.take(10)
+					</code></pre>
+			</section>
+			<section><p>Let's take a moment to look at this script! It:</p>
+			<ul>
+				<li>begins by importing the AUT libraries;</li>
+				<li>tells the program where it can find the data (in this case, the sample data that we have included in this Docker image);</li>
+				<li>tells it only to keep the "valid" pages, in this case HTML data;</li>
+				<li>tells it to ExtractDomain, or find the base domain of each URL - i.e. www.google.com/cats we are interested just in the domain, or www.google.com;</li>
+				<li>count them - how many times does www.google.com appear in this collection, for example;</li>
+				<li>and display the top ten!</li>
+			</ul>
+			</section>
+			<section>
+				<p>Now it is pasted in, let's run it!</p>
+				<p>Hold CTRL and D at the same time.</p>
+			</section>
+			<section>
+				<p>You should see:</p>
+				<pre><code data-trim data-noescape>
+					// Exiting paste mode, now interpreting.
+
+import io.archivesunleashed.spark.matchbox._
+import io.archivesunleashed.spark.rdd.RecordRDD._
+r: Array[(String, Int)] = Array((www.equalvoice.ca,4644), (www.liberal.ca,1968), (greenparty.ca,732), (www.policyalternatives.ca,601), (www.fairvote.ca,465), (www.ndp.ca,417), (www.davidsuzuki.org,396), (www.canadiancrc.com,90), (www.gca.ca,40), (communist-party.ca,39))
+
+scala>
+				</code></pre>
+			</section>
+			<section>
+				<p>We do this example to do two things:</p>
+				<ul>
+					<li>It is fairly simple and lets us know that AUT is working;</li>
+   					<li>and it tells us what we can expect to find in the web archives! In this case, we have a lot of the Liberal Party of Canada, Equal Voice Canada, and the Green Party of Canada.</li>
+   				</ul>
+   			</section>
+   			<section>
+   				<p>Now let's try with your own data! To do so, we take this script and substitute in a new directory. Remember to type in :paste and Ctrl+D to run it.</p>
+   				<pre><code data-trim data-noescape>
+import io.archivesunleashed.spark.matchbox._
+import io.archivesunleashed.spark.rdd.RecordRDD._
+
+val r = RecordLoader.loadArchives("/data/*.gz", sc)
+.keepValidPages()
+.map(r => ExtractDomain(r.getUrl))
+.countItems()
+.take(10)
+</code></pre>
+			</section>
+			<section>
+				<p><strong>Extracting Text</strong></p>
+				<p>Now that we know what we might find in a web archive, let us try extracting some text. You might want to get just the text of a given website or domain, for example.</p>
+				<p>Above we learned that the Liberal Party of Canada's website has 1,968 captures in the sample files we provided. Let's try to just extract that text.</p>
+			</section>
+			<section>
+				<p>To load this script, remember: type paste, copy-and-paste it into the shell, and then hold ctrl and D at the same time.</p>
+				<pre><code data-trim data-noescape>
+import io.archivesunleashed.spark.matchbox.{RemoveHTML, RecordLoader}
+import io.archivesunleashed.spark.rdd.RecordRDD._
+
+RecordLoader.loadArchives("/aut-resources/Sample-Data/*.gz", sc)
+  .keepValidPages()
+  .keepDomains(Set("liberal.ca"))
+  .map(r => (r.getCrawlDate, r.getDomain, r.getUrl, RemoveHTML(r.getContentString)))
+  .saveAsTextFile("/data/liberal-party-text")
+  				</code></pre>
+  			</section>
+  			<section>
+  				<p>If you're using your own data, that's why the domain count was key! Swap out the "liberal.ca" command above with the domain that you want to look at from your own data.</p>
+  				<p>Now let's look at the ensuing data. Go to the folder you provided in the very first startup – remember, in my case it was /users/ianmilligan1/desktop/data - and you will now have a folder called liberal-party-text. Open up the files with your text editor and check it out!</p>
+  			</section>
+  			<section>
+  				<p><strong>Ouch! Our First Error!</strong></p>
+  				<p>One of the vexing parts of this interface is that it creates output directories – and if the directory already exists, it comes tumbling down.</p>
+  				<p>As this is one of the most common errors, let's see it and then learn how to get around it.</p>
+  				<p>Try running the exact same script that you did above.</p>
+  			</section>
+  			<section>
+  				<pre><code data-trim data-noescape>
+import io.archivesunleashed.spark.matchbox.{RemoveHTML, RecordLoader}
+import io.archivesunleashed.spark.rdd.RecordRDD._
+
+RecordLoader.loadArchives("/aut-resources/Sample-Data/*.gz", sc)
+  .keepValidPages()
+  .keepDomains(Set("liberal.ca"))
+  .map(r => (r.getCrawlDate, r.getDomain, r.getUrl, RemoveHTML(r.getContentString)))
+  .saveAsTextFile("/data/liberal-party-text")
+  				</code></pre>
+  			</section>
+  			<section>
+  				<p>Instead of a nice crisp feeling of success, you will see a long dump of text beginning with:</p>
+				<p><pre>org.apache.hadoop.mapred.FileAlreadyExistsException: Output directory file:/data/liberal-party-text already exists</pre></p>
+				<p>To get around this, you can do two things:</p>
+				<ul>
+					<li>Delete the existing directory that you created;</li>
+					<li>Change the name of the output file - to /data/liberal-party-text-2 for example.</li>
+				</ul>
+				<p>Good luck!</p>
+			</section>
+			<section>
+				<p><b>Other Text Analysis Filters</b></p>
+				<p>Take some time to explore the various options and variables that you can swap in and around the .keepDomains line. Check out the <a href="http://archivesunleashed.org/aut/#plain-text-extraction">documentation</a> for some ideas.</p>
+			</section>
+			<section>
+				<p><b>Keep URL Patterns</b></p>
+				<p>Instead of domains, what if you wanted to have text relating to just a certain pattern? Substitute <pre>.keepDomains</pre> for a command like:</p>
+				<p><pre>.keepUrlPatterns(Set("(?i)http://geocities.com/EnchantedForest/.*".r))</pre></p>
+			</section>
+			<section>
+				<p><b>Filter by Date</b></p>
+				<p>What if we just wanted data from 2005, or 2008? You could add the following command after <pre>.keepValidPages()</pre>:</p>
+				<p><pre>.keepDate(List("2005"), YYYY)</pre></p>
+			</section>
+			<section>
+				<p><b>Filter by Language</b></p>
+				<p>What if you just want French-language pages? After <pre>.keepDomains</pre> add a new line:</p>
+				<p><pre>.keepLanguages(Set("fr"))</pre></p>
+			</section>
+			<section>
+				<p>For example, if we just wanted French-language Liberal pages, we would run:</p>
+				<pre><code data-trim data-noescape>
+import io.archivesunleashed.spark.matchbox.{RemoveHTML, RecordLoader}
+import io.archivesunleashed.spark.rdd.RecordRDD._
+
+RecordLoader.loadArchives("/aut-resources/Sample-Data/*.gz", sc)
+  .keepValidPages()
+  .keepDomains(Set("liberal.ca"))
+  .keepLanguages(Set("fr"))
+  .map(r => (r.getCrawlDate, r.getDomain, r.getUrl, RemoveHTML(r.getContentString)))
+  .saveAsTextFile("/data/liberal-party-french-text")
+  				</code></pre>
+  			</section>
+  			<section>
+  				<p><b>People, Places, and Things: Entities Ahoy!</b></p>
+  			</section>
+  			<section>
+  				<p>One last thing we can do with text is to try to use <a href="https://en.wikipedia.org/wiki/Named-entity_recognition">Named-entity recognition (NER)</a> to try to find people, organizations, and locations within the text.</p>
+  				<p>To do this, we need to have a classifier - luckily, we have included an English-language one from the <a href="https://nlp.stanford.edu/software/CRF-NER.shtml">Stanford NER project</a> in this Docker image!</p>
+  			</section>
+  			<section>
+  				<pre><code data-trim data-noescape>
+import io.archivesunleashed.spark.matchbox.ExtractEntities
+
+ExtractEntities.extractFromRecords("/aut-resources/NER/english.all.3class.distsim.crf.ser.gz", "/aut-resources/Sample-Data/*.gz", "/data/ner-output/", sc)
+				</code></pre>
+			</section>
+			<section>
+				<p>This will take a fair amount of time. Good excuse for a coffee break and to stretch!</p>
+				<p>When it is done, in the /data file you will have results. The first line should look like:</p>
+				<pre><code data-trim data-noescape>
+					(20060622,http://www.gca.ca/indexcms/?organizations&orgid=27,{"PERSON":["Marie"],"ORGANIZATION":["Green Communities Canada","Green Communities Canada News and Events Our Programs Join Green Communities Canada Downloads Privacy Policy Site Map GCA Clean North Kathie Brosemer"],"LOCATION":["St. E. Sault","Canada"]})
+				</code></pre>
+			</section>
+		</section>
+		<section>
+			<section>Part Seven: Network Analysis</section>
+			<section>
+				<p>One other thing we can do is a network analysis. By now you are probably getting good at running code.</p>
+				<p>Let's extract all of the links from the sample data and export them to a file format that the popular network analysis program Gephi can use.</p>
+			</section>
+			<section>
+				<pre><code data-trim data-noescape>
+import io.archivesunleashed.spark.matchbox.{ExtractDomain, ExtractLinks, RecordLoader, WriteGEXF}
+import io.archivesunleashed.spark.rdd.RecordRDD._
+
+val links = RecordLoader.loadArchives("/aut-resources/Sample-Data/*.gz", sc)
+  .keepValidPages()
+  .map(r => (r.getCrawlDate, ExtractLinks(r.getUrl, r.getContentString)))
+  .flatMap(r => r._2.map(f => (r._1, ExtractDomain(f._1).replaceAll("^\\s*www\\.", ""), ExtractDomain(f._2).replaceAll("^\\s*www\\.", ""))))
+  .filter(r => r._2 != "" && r._3 != "")
+  .countItems()
+  .filter(r => r._2 > 5)
+
+WriteGEXF(links, "/data/links-for-gephi.gexf")
+  				</code></pre>
+  				</section>
+  				<section>Now let's use Gephi! We'll do this together.</section>
+  			</section>
+  			<section>
+  				<section>Thanks for your time today!</section>
+  				<section>This work is primarily supported by the Andrew W. Mellon Foundation. Other financial and in-kind support comes from the Social Sciences and Humanities Research Council, Compute Canada, the Ontario Ministry of Research, Innovation, and Science, York University Libraries, Smart Start Labs, and the Faculty of Arts and David R. Cheriton School of Computer Science at the University of Waterloo.</section>
+		</section>
+		</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
