@@ -170,6 +170,23 @@ This will be the case for most of the files that you generate in this tutorial.
 
 For now, let's keep working on generating these files.
 
+### Just the Text
+
+You might just want to generate plain text. You could try the following.
+
+```scala
+import io.archivesunleashed.spark.matchbox.{RemoveHTML, RecordLoader}
+import io.archivesunleashed.spark.rdd.RecordRDD._
+
+RecordLoader.loadArchives("/aut-resources/Sample-Data/*.gz", sc)
+  .keepValidPages()
+  .keepDomains(Set("www.liberal.ca"))
+  .map(r => (RemoveHTML(r.getContentString)))
+  .saveAsTextFile("/data/liberal-party-text")
+```
+
+This way you could just paste the results into somewhere for analysis, and not have the extra information like domains, dates, etc.
+
 ### Ouch: Our First Error
 
 One of the vexing parts of this interface is that it creates output directories – and if the directory already exists, it comes tumbling down.
