@@ -141,7 +141,7 @@ import io.archivesunleashed.spark.rdd.RecordRDD._
 
 RecordLoader.loadArchives("/aut-resources/Sample-Data/*.gz", sc)
   .keepValidPages()
-  .keepDomains(Set("liberal.ca"))
+  .keepDomains(Set("www.liberal.ca"))
   .map(r => (r.getCrawlDate, r.getDomain, r.getUrl, RemoveHTML(r.getContentString)))
   .saveAsTextFile("/data/liberal-party-text")
 ```
@@ -164,6 +164,8 @@ The `_SUCCESS` file is just there to tell you that it worked!
 
 The two `part` files contain the results from the two files. You can do two things to work with these files. You could open each of them up in a text editor (right click on them and open them up in your text editor) to see the content. Or maybe you would copy and paste them into an interface like [Voyant-Tools](http://voyant-tools.org/) to analyze.
 
+In this case, only one of the two files contained data from the Liberal Party of Canada. `part-00000` will be empty, but `part-00001` will contain around 6MB of text!
+
 This will be the case for most of the files that you generate in this tutorial.
 
 For now, let's keep working on generating these files.
@@ -182,7 +184,7 @@ import io.archivesunleashed.spark.rdd.RecordRDD._
 
 RecordLoader.loadArchives("/aut-resources/Sample-Data/*.gz", sc)
   .keepValidPages()
-  .keepDomains(Set("liberal.ca"))
+  .keepDomains(Set("www.liberal.ca"))
   .map(r => (r.getCrawlDate, r.getDomain, r.getUrl, RemoveHTML(r.getContentString)))
   .saveAsTextFile("/data/liberal-party-text")
 ```
@@ -218,7 +220,7 @@ import io.archivesunleashed.spark.rdd.RecordRDD._
 
 RecordLoader.loadArchives("/aut-resources/Sample-Data/*.gz", sc)
   .keepValidPages()
-  .keepDomains(Set("liberal.ca"))
+  .keepDomains(Set("www.liberal.ca"))
   .keepLanguages(Set("fr"))
   .map(r => (r.getCrawlDate, r.getDomain, r.getUrl, RemoveHTML(r.getContentString)))
   .saveAsTextFile("/data/liberal-party-french-text")
