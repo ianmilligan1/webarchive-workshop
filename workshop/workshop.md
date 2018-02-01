@@ -3,6 +3,8 @@
 
 The reality of any hands-on workshop is that things will break. We've tried our best to provide a robust environment that can let you walk through the basics of the Archives Unleashed Toolkit alongside us.
 
+[The accompanying slide deck can be found here](https://ianmilligan1.github.io/webarchive-workshop/).
+
 If you have any questions, let us know!
 
 - [Nick Ruest](https://github.com/ruebot)
@@ -12,15 +14,23 @@ If you have any questions, let us know!
 
 TBA
 
+## Resources and Tools Used
+
+To use this workshop, you will need the following things:
+
+* [Docker](https://www.docker.com/get-docker): Please download and install Docker. It should be a straigthforward installation, and works on all platforms.
+* [Gephi](https://gephi.org/): Please download and install Gephi. It should also be a straightforward installation, and works on all platforms.
+* **A Good Text Editor**: Writing out scripts is best in a nice text editor. Ian personally recommends [Sublime Text](https://www.sublimetext.com/), a nice cross-platform text editor.
+
+We use Docker as it lets you run "containers," which let you run a self-contained Linux instance. Before Docker, we used fully-fledged virtual machines, which were many GBs in size and had a lot of overhead. Alternatively, we tried to write instructors for Windows, Mac, Linux, and all the other fun things out there in the wild, which was very frustrating.
+
 ## Installation and Use
 
 ### Docker
 
-This lesson only requires one dependency: [Docker](https://www.docker.com/get-docker). 
+[We have full instructions for installing Docker on Mac here](https://github.com/SamFritz/archivesunleashed-workspace/blob/master/docker-instal.md). They will be similar on other operating systems.
 
-Later in this lesson, we use the networking tool [Gephi](https://gephi.org/).
-
-Make sure that Docker is running! If it isn't you might see an error like `docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?` – make sure to run it (on Mac, for example, you need to run the Docker application itself).
+Make sure that Docker is running (you can see an example of how in the link above)! If it isn't you might see an error like `docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?` – make sure to run it (on Mac, for example, you need to run the Docker application itself).
 
 Make a directory in your userspace, somewhere where you can find it: on your desktop, perhaps. Call it `data`. In my case, I will create it on my desktop and it will have a path like `/Users/ianmilligan1/desktop/data`.
 
@@ -28,7 +38,7 @@ Use the following command, replacing `/path/to/your/data` with the directory. **
 
 `docker run --rm -it -v "/path/to/your/data:/data" archivesunleashed/docker-aut`
 
-For example, if your files are in `/Users/ianmilligan1/desktop/data` you would run the above command like:
+For example, if your files are in `/Users/ianmilligan1/desktop/data` you would run the above command like (make sure that you have all the slashes, including the one before `Users`, and you will also have to make sure you use an upper-case `Users`):
 
 `docker run --rm -it -v "/Users/ianmilligan1/desktop/data:/data" archivesunleashed/docker-aut`
 
@@ -123,7 +133,7 @@ Now that we know what we might find in a web archive, let us try extracting some
 
 Above we learned that the Liberal Party of Canada's website has 1,968 captures in the sample files we provided. Let's try to just extract that text.
 
-To load this script, remember: type `paste`, copy-and-paste it into the shell, and then hold `ctrl` and `D` at the same time.
+To load this script, remember to type `:paste`, copy-and-paste it into the shell, and then hold `ctrl` and `D` at the same time.
 
 ```scala
 import io.archivesunleashed.spark.matchbox.{RemoveHTML, RecordLoader}
