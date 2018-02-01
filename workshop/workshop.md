@@ -150,6 +150,24 @@ RecordLoader.loadArchives("/aut-resources/Sample-Data/*.gz", sc)
 
 Now let's look at the ensuing data. Go to the folder you provided in the very first startup – remember, in my case it was `/users/ianmilligan1/desktop/data` - and you will now have a folder called `liberal-party-text`. Open up the files with your text editor and check it out!
 
+### Analyzing Our Data
+
+Once you open up your `liberal-party-text` folder, you should see three files: 
+
+```
+part-00000
+part-00001
+_SUCCESS
+```
+
+The `_SUCCESS` file is just there to tell you that it worked!
+
+The two `part` files contain the results from the two files. You can do two things to work with these files. You could open each of them up in a text editor (right click on them and open them up in your text editor) to see the content. Or maybe you would copy and paste them into an interface like [Voyant-Tools](http://voyant-tools.org/) to analyze.
+
+This will be the case for most of the files that you generate in this tutorial.
+
+For now, let's keep working on generating these files.
+
 ### Ouch: Our First Error
 
 One of the vexing parts of this interface is that it creates output directories – and if the directory already exists, it comes tumbling down.
@@ -205,6 +223,17 @@ RecordLoader.loadArchives("/aut-resources/Sample-Data/*.gz", sc)
   .map(r => (r.getCrawlDate, r.getDomain, r.getUrl, RemoveHTML(r.getContentString)))
   .saveAsTextFile("/data/liberal-party-french-text")
 ```
+
+Note that the output will again take the form of:
+
+
+```
+part-00000
+part-00001
+_SUCCESS
+```
+
+But now when you open those files, you will only see the websites that contain French-language Liberal.ca pages!
 
 ## People, Places, and Things: Entities Ahoy!
 
