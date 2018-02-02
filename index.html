@@ -286,14 +286,42 @@ import io.archivesunleashed.spark.rdd.RecordRDD._
 
 RecordLoader.loadArchives("/aut-resources/Sample-Data/*.gz", sc)
   .keepValidPages()
-  .keepDomains(Set("liberal.ca"))
+  .keepDomains(Set("www.liberal.ca"))
   .map(r => (r.getCrawlDate, r.getDomain, r.getUrl, RemoveHTML(r.getContentString)))
   .saveAsTextFile("/data/liberal-party-text")
   				</code></pre>
   			</section>
   			<section>
-  				<p>If you're using your own data, that's why the domain count was key! Swap out the "liberal.ca" command above with the domain that you want to look at from your own data.</p>
+  				<p>If you're using your own data, that's why the domain count was key! Swap out the "www.liberal.ca" command above with the domain that you want to look at from your own data.</p>
   				<p>Now let's look at the ensuing data. Go to the folder you provided in the very first startup – remember, in my case it was /users/ianmilligan1/desktop/data - and you will now have a folder called liberal-party-text. Open up the files with your text editor and check it out!</p>
+  			</section>
+  			<section>
+  				<p>Once you open up your `liberal-party-text` folder, you should see three files: </p>
+  				<ul>
+  					<li>part-00000</li>
+  					<li>part-00001</li>
+  					<li>_SUCCESS</li>
+  				</ul>
+  				<p>The `_SUCCESS` file is just there to tell you that it worked!</p>
+  				<p>The two part files contain the results from the two files. Open them up with a text editor!</p>
+  			</section>
+  			<section>
+  				<p><strong>Just the Text!</strong></p>
+  				<p>You might just want to generate plain text. You could try the following.</p>
+				<pre><code data-trim data-noescape>
+import io.archivesunleashed.spark.matchbox.{RemoveHTML, RecordLoader}
+import io.archivesunleashed.spark.rdd.RecordRDD._
+
+RecordLoader.loadArchives("/aut-resources/Sample-Data/*.gz", sc)
+  .keepValidPages()
+  .keepDomains(Set("www.liberal.ca"))
+  .map(r => (RemoveHTML(r.getContentString)))
+  .saveAsTextFile("/data/liberal-party-just-text")
+  				</code></pre>
+  			</section>
+  			<section>
+  				<p>This way you could just paste the results into somewhere for analysis, and not have the extra information like domains, dates, etc.</p>
+  				<p>For example, you could paste this data into <a href="http://voyant-tools.org/">Voyant Tools</a>!</p>
   			</section>
   			<section>
   				<p><strong>Ouch! Our First Error!</strong></p>
@@ -308,7 +336,7 @@ import io.archivesunleashed.spark.rdd.RecordRDD._
 
 RecordLoader.loadArchives("/aut-resources/Sample-Data/*.gz", sc)
   .keepValidPages()
-  .keepDomains(Set("liberal.ca"))
+  .keepDomains(Set("www.liberal.ca"))
   .map(r => (r.getCrawlDate, r.getDomain, r.getUrl, RemoveHTML(r.getContentString)))
   .saveAsTextFile("/data/liberal-party-text")
   				</code></pre>
@@ -351,7 +379,7 @@ import io.archivesunleashed.spark.rdd.RecordRDD._
 
 RecordLoader.loadArchives("/aut-resources/Sample-Data/*.gz", sc)
   .keepValidPages()
-  .keepDomains(Set("liberal.ca"))
+  .keepDomains(Set("www.liberal.ca"))
   .keepLanguages(Set("fr"))
   .map(r => (r.getCrawlDate, r.getDomain, r.getUrl, RemoveHTML(r.getContentString)))
   .saveAsTextFile("/data/liberal-party-french-text")
