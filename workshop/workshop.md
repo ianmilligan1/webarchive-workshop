@@ -182,7 +182,7 @@ RecordLoader.loadArchives("/aut-resources/Sample-Data/*.gz", sc)
   .keepValidPages()
   .keepDomains(Set("www.liberal.ca"))
   .map(r => (RemoveHTML(r.getContentString)))
-  .saveAsTextFile("/data/liberal-party-text")
+  .saveAsTextFile("/data/liberal-party-just-text")
 ```
 
 This way you could just paste the results into somewhere for analysis, and not have the extra information like domains, dates, etc.
