@@ -10,10 +10,6 @@ If you have any questions, let us know!
 - [Nick Ruest](https://github.com/ruebot)
 - [Ian Milligan](https://github.com/ianmilligan1)
 
-## Table of Contents
-
-TBA
-
 ## Resources and Tools Used
 
 To use this workshop, you will need the following things:
