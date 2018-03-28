@@ -1,9 +1,7 @@
 # Hands on With The Archives Unleashed Toolkit
 ## Ian Milligan and Nick Ruest
 
-The reality of any hands-on workshop is that things will break. We've tried our best to provide a robust environment that can let you walk through the basics of the Archives Unleashed Toolkit alongside us.
-
-[The accompanying slide deck can be found here](https://ianmilligan1.github.io/webarchive-workshop/).
+We've tried our best to provide a robust environment that can let you walk through the basics of the Archives Unleashed Toolkit alongside us (well, in these docs).
 
 If you have any questions, let us know!
 
