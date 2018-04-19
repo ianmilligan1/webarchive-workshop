@@ -89,7 +89,7 @@ Let's take a moment to look at this script. It:
 
 Once it is pasted in, let's run it.
 
-You run pasted scripts by holding the *Ctrl* key and the *D* key at the same time. Try that now.
+Press enter. You then run pasted scripts by holding the *Ctrl* key and the *D* key at the same time. Try that now.
 
 You should see:
 
@@ -108,7 +108,7 @@ We like to use this example to do two things:
 * It is fairly simple and lets us know that AUT is working;
 * and it tells us what we can expect to find in the web archives! In this case, we have a lot of the Liberal Party of Canada, Equal Voice Canada, and the Green Party of Canada.
 
-**If you loaded your own data above**, you can access that directory by substituting the directory in the `loadArchives` command. Try it again! Remeber to type `:paste`, paste the following command in, and then `ctrl` + `D` to execute.
+**If you loaded your own data above**, you can access that directory by substituting the directory in the `loadArchives` command. Try it again! Remeber to type `:paste`, paste the following command in, press enter, and then `ctrl` + `D` to execute.
 
 ```scala
 import io.archivesunleashed._
@@ -127,7 +127,7 @@ Now that we know what we might find in a web archive, let us try extracting some
 
 Above we learned that the Liberal Party of Canada's website has 1,968 captures in the sample files we provided. Let's try to just extract that text.
 
-To load this script, remember to type `:paste`, copy-and-paste it into the shell, and then hold `ctrl` and `D` at the same time.
+To load this script, remember to type `:paste`, copy-and-paste it into the shell, and press enter. You can then hold `ctrl` and `D` at the same time.
 
 ```scala
 import io.archivesunleashed._
