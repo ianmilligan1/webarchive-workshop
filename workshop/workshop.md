@@ -257,7 +257,8 @@ To do this, we need to have a classifier - luckily, we have included an English-
 The code is below. It looks a bit different than what you are used to:
 
 ```
-import io.archivesunleashed.spark.matchbox.ExtractEntities
+import io.archivesunleashed._
+import io.archivesunleashed.matchbox._
 
 ExtractEntities.extractFromRecords("/aut-resources/NER/english.all.3class.distsim.crf.ser.gz", "/aut-resources/Sample-Data/*.gz", "/data/ner-output/", sc)
 ```
@@ -279,8 +280,8 @@ One other thing we can do is a network analysis. By now you are probably getting
 Let's extract all of the links from the sample data and export them to a file format that the popular network analysis program Gephi can use.
 
 ```scala
-import io.archivesunleashed.spark.matchbox.{ExtractDomain, ExtractLinks, RecordLoader, WriteGEXF}
-import io.archivesunleashed.spark.rdd.RecordRDD._
+import io.archivesunleashed._
+import io.archivesunleashed.matchbox._
 
 val links = RecordLoader.loadArchives("/aut-resources/Sample-Data/*.gz", sc)
   .keepValidPages()
