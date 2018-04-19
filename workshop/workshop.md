@@ -68,8 +68,8 @@ At the `scala>` prompt, type the following command and press enter.
 Now cut and paste the following script:
 
 ```scala
-import io.archivesunleashed.spark.matchbox._
-import io.archivesunleashed.spark.rdd.RecordRDD._
+import io.archivesunleashed._
+import io.archivesunleashed.matchbox._
 
 val r = RecordLoader.loadArchives("/aut-resources/Sample-Data/*.gz", sc)
 .keepValidPages()
@@ -96,8 +96,8 @@ You should see:
 ```
 // Exiting paste mode, now interpreting.
 
-import io.archivesunleashed.spark.matchbox._
-import io.archivesunleashed.spark.rdd.RecordRDD._
+import io.archivesunleashed._
+import io.archivesunleashed.matchbox._
 r: Array[(String, Int)] = Array((www.equalvoice.ca,4644), (www.liberal.ca,1968), (greenparty.ca,732), (www.policyalternatives.ca,601), (www.fairvote.ca,465), (www.ndp.ca,417), (www.davidsuzuki.org,396), (www.canadiancrc.com,90), (www.gca.ca,40), (communist-party.ca,39))
 
 scala>
@@ -111,8 +111,8 @@ We like to use this example to do two things:
 **If you loaded your own data above**, you can access that directory by substituting the directory in the `loadArchives` command. Try it again! Remeber to type `:paste`, paste the following command in, and then `ctrl` + `D` to execute.
 
 ```scala
-import io.archivesunleashed.spark.matchbox._
-import io.archivesunleashed.spark.rdd.RecordRDD._
+import io.archivesunleashed._
+import io.archivesunleashed.matchbox._
 
 val r = RecordLoader.loadArchives("/data/*.gz", sc)
 .keepValidPages()
@@ -130,8 +130,8 @@ Above we learned that the Liberal Party of Canada's website has 1,968 captures i
 To load this script, remember to type `:paste`, copy-and-paste it into the shell, and then hold `ctrl` and `D` at the same time.
 
 ```scala
-import io.archivesunleashed.spark.matchbox.{RemoveHTML, RecordLoader}
-import io.archivesunleashed.spark.rdd.RecordRDD._
+import io.archivesunleashed._
+import io.archivesunleashed.matchbox._
 
 RecordLoader.loadArchives("/aut-resources/Sample-Data/*.gz", sc)
   .keepValidPages()
@@ -169,8 +169,8 @@ For now, let's keep working on generating these files.
 You might just want to generate plain text. You could try the following.
 
 ```scala
-import io.archivesunleashed.spark.matchbox.{RemoveHTML, RecordLoader}
-import io.archivesunleashed.spark.rdd.RecordRDD._
+import io.archivesunleashed._
+import io.archivesunleashed.matchbox._
 
 RecordLoader.loadArchives("/aut-resources/Sample-Data/*.gz", sc)
   .keepValidPages()
@@ -190,8 +190,8 @@ As this is one of the most common errors, let's see it and then learn how to get
 Try running the **exact same script** that you did above.
 
 ```scala
-import io.archivesunleashed.spark.matchbox.{RemoveHTML, RecordLoader}
-import io.archivesunleashed.spark.rdd.RecordRDD._
+import io.archivesunleashed._
+import io.archivesunleashed.matchbox._
 
 RecordLoader.loadArchives("/aut-resources/Sample-Data/*.gz", sc)
   .keepValidPages()
@@ -226,8 +226,8 @@ Some options:
 For example, if we just wanted the French-language Liberal pages, we would run:
 
 ```scala
-import io.archivesunleashed.spark.matchbox.{RemoveHTML, RecordLoader}
-import io.archivesunleashed.spark.rdd.RecordRDD._
+import io.archivesunleashed._
+import io.archivesunleashed.matchbox._
 
 RecordLoader.loadArchives("/aut-resources/Sample-Data/*.gz", sc)
   .keepValidPages()
