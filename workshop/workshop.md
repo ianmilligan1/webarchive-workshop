@@ -30,11 +30,11 @@ Make a directory in your userspace, somewhere where you can find it: on your des
 
 Use the following command, replacing `/path/to/your/data` with the directory. **If you want to use your own ARC or WARC files, please put them in this directory**.
 
-`docker run --rm -it -v "/path/to/your/data:/data" archivesunleashed/docker-aut:0.15.0`
+`docker run --rm -it -v "/path/to/your/data:/data" archivesunleashed/docker-aut:0.16.0`
 
 For example, if your files are in `/Users/ianmilligan1/desktop/data` you would run the above command like (make sure that you have all the slashes, including the one before `Users`, and you will also have to make sure you use an upper-case `Users`):
 
-`docker run --rm -it -v "/Users/ianmilligan1/desktop/data:/data" archivesunleashed/docker-aut:0.15.0`
+`docker run --rm -it -v "/Users/ianmilligan1/desktop/data:/data" archivesunleashed/docker-aut:0.16.0`
 
 Once you run this command, you will have to wait a few minutes while data is downloaded and AUT builds. Once it is all working, you should see:
 
